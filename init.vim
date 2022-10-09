@@ -21,7 +21,8 @@ Plug 'https://github.com/jiangmiao/auto-pairs' " Insert or delete brackets, pare
 Plug 'EdenEast/nightfox.nvim', { 'tag': 'v1.0.0' } " Nighfox 
 
 
-" Languages
+"p Languages
+Plug 'https://github.com/wuelnerdotexe/vim-astro' "Astro
 Plug 'https://github.com/cakebaker/scss-syntax.vim' " scss 
 Plug 'https://github.com/othree/html5.vim'
 Plug 'https://github.com/pangloss/vim-javascript'
