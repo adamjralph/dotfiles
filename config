@@ -193,7 +193,7 @@ bindsym $mod+shift+v exec vivaldi
 bindsym $mod+shift+f exec firefox
 # bindsym $mod+shift+i exec code
 
-exec alacritty 
+exec alacrity
 
 # Load desktop background
 exec_always feh --bg-scale /usr/share/backgrounds/evergreen-dark3.jpg
