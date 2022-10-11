@@ -3,8 +3,18 @@
 :set autoindent
 :set tabstop=2
 :set shiftwidth=2
+:set expandtab
 :set smarttab
 :set softtabstop=2
+:set nohlsearch
+:set hidden
+:set noerrorbells
+" :set nowrap
+:set ignorecase
+:set smartcase
+:set noswapfile
+:set nobackup	
+:set undodir=~/.vim/undodir
 
 call plug#begin()
 
@@ -19,6 +29,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/mattn/emmet-vim' " Emmet-vim
 Plug 'https://github.com/jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes 
 Plug 'EdenEast/nightfox.nvim', { 'tag': 'v1.0.0' } " Nighfox 
+Plug 'mbbill/undotree'
 
 
 "p Languages
@@ -29,6 +40,9 @@ Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/MaxMEllon/vim-jsx-pretty'
 
 call plug#end()
+
+"Undo tree
+nnoremap <F4> :UndotreeToggle<cr>
 
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
