@@ -191,7 +191,7 @@ bar {
 bindsym $mod+shift+x exec i3lock
 bindsym $mod+shift+v exec vivaldi  
 bindsym $mod+shift+f exec firefox
-# bindsym $mod+shift+i exec code
+bindsym $mod+shift+i exec code
 
 exec alacrity
 
