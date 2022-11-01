@@ -25,7 +25,7 @@ Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/ap/vim-css-color'
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 Plug 'https://github.com/ryanoasis/vim-devicons'
-" Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/mattn/emmet-vim' " Emmet-vim
 Plug 'https://github.com/jiangmiao/auto-pairs' " Insert or delete brackets, parens, quotes 
 Plug 'EdenEast/nightfox.nvim', { 'tag': 'v1.0.0' } " Nighfox 
@@ -47,6 +47,19 @@ nnoremap <F4> :UndotreeToggle<cr>
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+"CoC
+" use <tab> for trigger completion and navigate to the next complete item
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <silent><expr> <c-space> coc#refresh()
 
 inoremap jk <ESC>
 vnoremap jk <ESC>
